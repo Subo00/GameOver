@@ -6,7 +6,7 @@ public class Dragger : MonoBehaviour
     private Vector3 _dragOffset;
     private Camera _camera;
     //Rotator
-    [SerializeField] private float _rotateSpeed = 100f;
+    private float _rotateSpeed = 100f;
     private float _horInput;
     private float _rotation = 0f;
 
