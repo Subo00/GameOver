@@ -17,12 +17,22 @@ public class startFillingFinishPipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject coloredBuilding;
-        coloredBuilding = GameObject.FindGameObjectWithTag("Building");
+        int countObjects = 0;
+        int countFilled = 0;
+        GameObject[] coloredBuildings;
+        coloredBuildings = GameObject.FindGameObjectsWithTag("Building");
 
-        if (coloredBuilding.GetComponent<BuildingTransparency>().done == true)
+        foreach (GameObject coloredBuilding in coloredBuildings)
         {
-            //m_ObjectCollider.isTrigger = true;
+            countObjects += 1;
+            if (coloredBuilding.GetComponent<BuildingTransparency>().done == true)
+            {
+                //m_ObjectCollider.isTrigger = true;
+                countFilled += 1;
+            }
+        }
+        if (countFilled == countObjects)
+        {
             coll.isTrigger = true;
         }
     }
