@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildingTransparency : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
     //public AudioClip audioClip;
 
     public bool done;
@@ -18,14 +18,15 @@ public class BuildingTransparency : MonoBehaviour
         done = false;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         buildingSize = gameObject.GetComponent<Transform>();
-        audioSource = gameObject.GetComponent<AudioSource>();
+        //audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D target)
 	{
         if (target.tag == "Metaball_liquid" && opacity < 1f)
         {
-            //FindObjectOfType<AudioManager>().Play(1);
+            if(opacity == 0.0f)
+                FindObjectOfType<AudioManager>().Play(1);
             target.gameObject.SetActive(false);
             opacity += 0.01f;
             spriteRenderer.color = new Color(1f, 1f, 1f, opacity);
@@ -38,7 +39,7 @@ public class BuildingTransparency : MonoBehaviour
         if (done == false && opacity > 1.0f)
         {
             //audioSource.clip = audioClip;
-            audioSource.Play();
+            //audioSource.Play();
 
             float x = 1.0f;
             for (int i = 0; i < 5; i++)
