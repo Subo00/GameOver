@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sponge : MonoBehaviour
+public class FinishPipe : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     public bool done;
@@ -20,7 +20,10 @@ public class Sponge : MonoBehaviour
         {
             target.gameObject.SetActive(false);
             filled += 1;
-            if (filled >= 100) done = true;
+            if (filled >= 100)
+            {
+                done = true;
+            }
         }
     }
 }

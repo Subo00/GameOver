@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishPipe : MonoBehaviour
+public class Sponge : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private void Start()
