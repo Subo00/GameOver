@@ -16,13 +16,22 @@ public class FinishPipe : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.tag == "Metaball_liquid")
+        if (target.tag == "Metaball_liquid" && filled < 100)
         {
             target.gameObject.SetActive(false);
+            if (filled == 0)
+                FindObjectOfType<AudioManager>().Play(1);
+
             filled += 1;
             if (filled >= 100)
             {
                 done = true;
+                if (filled == 100)
+                {
+                    FindObjectOfType<AudioManager>().Play(2);
+                    filled += 1;
+                }
+
             }
         }
     }
