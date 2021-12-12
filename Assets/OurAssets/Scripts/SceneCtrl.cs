@@ -9,5 +9,10 @@ public class SceneCtrl : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void RestartScene()
+    {
+        LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
 
