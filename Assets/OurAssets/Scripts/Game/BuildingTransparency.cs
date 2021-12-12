@@ -25,6 +25,7 @@ public class BuildingTransparency : MonoBehaviour
 	{
         if (target.tag == "Metaball_liquid" && opacity < 1f)
         {
+            //FindObjectOfType<AudioManager>().Play(1);
             target.gameObject.SetActive(false);
             opacity += 0.01f;
             spriteRenderer.color = new Color(1f, 1f, 1f, opacity);
@@ -53,6 +54,7 @@ public class BuildingTransparency : MonoBehaviour
                 StartCoroutine(ExampleCoroutine());
                 buildingSize.localScale = new Vector3(x, x, x);
             }
+            FindObjectOfType<AudioManager>().Play(2);
             done = true;
         }
     }
