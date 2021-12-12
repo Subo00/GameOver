@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BuildingTransparency : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource audioSource;
+    //public AudioClip audioClip;
+
     public bool done;
     private SpriteRenderer spriteRenderer;
     private float opacity = 0.0f;
@@ -14,6 +18,7 @@ public class BuildingTransparency : MonoBehaviour
         done = false;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         buildingSize = gameObject.GetComponent<Transform>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D target)
@@ -31,6 +36,9 @@ public class BuildingTransparency : MonoBehaviour
     {
         if (done == false && opacity > 1.0f)
         {
+            //audioSource.clip = audioClip;
+            audioSource.Play();
+
             float x = 1.0f;
             for (int i = 0; i < 5; i++)
             {
