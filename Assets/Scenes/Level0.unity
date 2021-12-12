@@ -391,6 +391,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 828f18d4189e48d43b01138a120eb700, type: 3}
+--- !u!84 &384719903
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1920
+  m_Height: 345
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &477433223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8433664041806596532, guid: 3bd43f6e3caef514d9b9bf435892695d, type: 3}
@@ -780,42 +816,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7175046580307096121, guid: a496c261d97c7c04f9f31e20e68f3ca2, type: 3}
   m_PrefabInstance: {fileID: 1698362178}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &727956690
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1920
-  m_Height: 1080
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &736506375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,7 +945,7 @@ PrefabInstance:
     - target: {fileID: 6961943579684257505, guid: 371d96803d44ff94bb60c1007be48031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1698362179}
     - target: {fileID: 6961943579684257505, guid: 371d96803d44ff94bb60c1007be48031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
@@ -1516,6 +1516,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a496c261d97c7c04f9f31e20e68f3ca2, type: 3}
+--- !u!114 &1698362179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7175046580307096124, guid: a496c261d97c7c04f9f31e20e68f3ca2, type: 3}
+  m_PrefabInstance: {fileID: 1698362178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719429759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbfd0144dbec2545b6822be29d8c4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1808588268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1786,7 +1797,7 @@ PrefabInstance:
     - target: {fileID: 8968645018863885214, guid: 17d8860ffafbb96429344e1fdf6f7141, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1698362179}
     - target: {fileID: 8968645018863885214, guid: 17d8860ffafbb96429344e1fdf6f7141, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartScene
