@@ -5,6 +5,7 @@ using UnityEngine;
 public class FinishPipe : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    public GameObject victoryDisplay;
     public bool done;
     private int filled;
     private void Start()
@@ -30,6 +31,7 @@ public class FinishPipe : MonoBehaviour
                 {
                     FindObjectOfType<AudioManager>().Play(2);
                     filled += 1;
+                    victoryDisplay.SetActive(true);
                 }
 
             }
